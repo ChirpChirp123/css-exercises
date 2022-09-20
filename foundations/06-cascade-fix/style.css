@@ -1,3 +1,8 @@
+/**************************************************************************************************/
+/*You can edit the CSS file by adding, removing, or editing selectors for a declaration block, or by 
+moving declaration blocks around. You should not edit the HTML file or any of the actual styles in the CSS.*/
+/**************************************************************************************************/
+
 body{
   font-family:Arial, Helvetica, sans-serif
 }
@@ -16,20 +21,57 @@ body{
 .para {
   font-size: 22px;
 }
-
-.confirm {
-  background: green;
-  color: white;
-  font-weight: bold;
-} 
-
 .button {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-size: 20px;
 }
 
-.child {
+div.text {
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 100;
+}
+/**************************************************************************************************/
+/******************************************Solutions**********************************************/
+/**************************************************************************************************/
+
+/*.confirm {
+  background: green;
+  color: white;
+  font-weight: bold;
+} */
+
+/*Because there is another Class "button" placed after the Class of "Confirm", this renders those stylings irrelevant by tiebreaker rule (last read)*/
+/*As a result, there is no styling applied to the "Confirm" button on our webpage despite there being written material in our stylesheet*/
+/*The easiest way to solve this cascade issue would be to remove the .confirm declaration from the stylesheet and rely on a new declaration block
+of #confirm-button from the ID using the same elements that were initially for .confirm*/
+/*This allows us to apply the required properties to the HTML for this exercise due to specifity ranking ID>Class>Type, and bypass the "Button" stylings*/
+/*And we can remove ".confirm" for redundancy*/
+
+#confirm-button{
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}
+
+/*
+  .small-para {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  
+  .para {
+    font-size: 22px;
+  }
+*/
+
+/*We're having an issue where .small-para stylings are being ignored and are following .para instead within the class group*/
+/*This is because the CSS emphasizes the last result of the sheet as it goes through every factor listed*/
+/*Since chaining is not stated correctly in the CSS style sheet, we will have to appropriately list the chaining classes together as ".para.small-para"*/
+/*And list the required styles for that specific class. We can now remove ".child" from the CSS for redundancy*/
+
+/*.child {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
@@ -39,4 +81,14 @@ div.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
+}
+*/
+
+/*This is the exact same issue going on with "class = text child", where "div.text" is the last declaration in the CSS and so the ".child" is being ignored*/
+/*and the solution remains the same*/
+/*Since both rules end up using the same properties, we can group them together with commas as they share a declaration box */
+
+.para.small-para, .text.child{
+  font-weight: 800;
+  font-size: 14px;
 }

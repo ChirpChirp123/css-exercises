@@ -1,0 +1,15 @@
+/*For Descendant CSS, remove the comma between the two classes that share stylings*/
+/* Elements that are not a part of the Descendant CSS will be ignored despite having the classes attached*/
+.container .text{
+    color: red;
+    font-size: 20px;
+    background-color: yellowgreen;
+    text-align: center;
+}
+/* Below are some other possible descendant combinators:
+
+div p
+div .text
+.container p
+
+*/

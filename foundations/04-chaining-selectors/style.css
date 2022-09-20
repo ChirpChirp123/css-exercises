@@ -1,0 +1,9 @@
+/*For specifity, you can combine two classes together by having them together with no spaces*/
+.avatar.proportioned{
+    width: 300px;
+    height: auto;
+}
+.avatar.distorted{
+    width: 200px;
+    height: 400px;
+}
