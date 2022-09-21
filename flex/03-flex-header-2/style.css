@@ -12,6 +12,7 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
 }
 
 .profile-image {
@@ -46,3 +47,7 @@ a {
 ul {
   list-style-type: none;
 }
+
+/*This one is going to be more complicated since we're going to need to adjust our html to keep the sides of the header separate!*/
+/*Start again by counting the potential # of flexbox containers, including the one containing all: about four.*/
+/*Header is going to be our initial flexbox, time to enable its display.*/
