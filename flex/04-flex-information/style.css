@@ -8,6 +8,8 @@ img {
 }
 
 .title {
+  display: flex;
+  justify-content: center;
   font-size: 36px;
   font-weight: 900;
 }
@@ -24,3 +26,8 @@ img {
   justify-content: center;
   background: #eee;
 }
+
+/*Explanations*/
+
+/*Our assignment requires us to center everything within their respective flexboxes and position them on the center of the page.*/
+/*Let's start off by enabling flexibility in our .title class and center it by justify-content.*/

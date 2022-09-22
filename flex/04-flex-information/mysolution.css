@@ -16,6 +16,7 @@ body {
 .textbox{
     display: flex;
     padding-left: 2em;
+    max-width: 200px;
 }
 img {
     width: 100px;
@@ -64,6 +65,7 @@ img {
 /*We're going to make one more flexbox to correct the padding properties of the text, make it more centered alongside the image.*/
 /*We'll have to establish a new class "textbox" where the properties will be assigned to, and establish it for each plant text-section.*/
 /*With that out of the way, we enable flex capabilities with display and adding whatever padding value is needed.*/
+/*Since our text is too stretched out, we can fix it with adding a maximum width to the container's dimensions*/
 
 /*Be sure to mess around with the dimensions of the page to see if the flex properties are working properly!*/ 
 

@@ -1,0 +1,63 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 900;
+}
+.plant-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+.info-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+    max-width: 200px;
+}
+/* do not edit this footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
+
+/*Explanations*/
+
+    /*Our assignment requires us to center everything within their respective flexboxes and position them on the center of the page.*/
+/*Before we begin, always count how many possible flexboxes we're going to need for each material*/
+/*It's going to be six in total: one for the title, one for all the material to be placed on a row, and then four with one for each plant*/
+/*Let's start off by enabling flexibility in our .title class and center it by justify-content.*/
+/*With that out of the way, we need to figure out how to center all the contents. When in doubt, create more flexboxes*/
+/*We're going to create a new division called "plant-info" and its function will be selecting all the plant information listed in the body*/
+/*After writing it in our css and html, time to add flexibility properties*/
+/*Enable flexibility and align everything center by x/y axes (justify-content and align-items)*/
+/*To finish it off, let's add margins to our plant-info so that the information remains directly centered on screen*/
+
+    /*Now we have our text and images there, but our text is directly linked to our images and we need to separate them*/
+/*When in doubt, create another flexbox... So now we're going to create another container called ".info-text" just to move them.*/
+/*But we're not going to make one, we're going to make four so that each plant has their own flexbox for their items to be independent*/
+/*In our html, we should have a container for each plant labeled as ".info-text", representing a flexbox for each plant*/
+/*Now it's time to enable our general flexibility properties: display, alignment, and potential direction.*/
+/*For our direction, we'll have to display it as a column so that the text will be placed under the image as the container becomes more vertical*/
+/*Our text is still stretched to some degree, which means we'll have to limit the dimensions of our flexbox*/
+/*We can do this by enabling "max-width: #px" to ensure that the text remains inline with the image!*/
+/*All that's left is some padding between each plant flexbox and then we're done!*/
