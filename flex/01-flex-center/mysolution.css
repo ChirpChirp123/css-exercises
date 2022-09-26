@@ -1,26 +1,20 @@
-/*Taking a look into the html, we'll only have one flexbox: the container class*/
-/*.box can become our flex items, so no additional coding is needed to center*/
-/*First off, we need to enable flexbox with "display: flex;" so we can adjust the materials by shorthand*/
-/*Now we need to consider how the elements are formatted. Type "justify-content: center" and you'll see that the contents are already in __row__*/
-/*We put the contents in the top-center of the screen since "justify-content" is __horizontal__ in __row__ formatting*/
-/*To fully center the flexbox, we'll have to use "align-items: center" to adjust it __vertically__*/
-/*If contents were in column formatting by "flex-direction: column", then the properties would change axes*/
-
 .container {
-    background: dodgerblue;
-    border: 4px solid midnightblue;
-    width: 400px;
-    height: 300px;
-    display: flex; /**/
-    justify-content: center; /**/
-    align-items: center; /**/
-  }
-  
-  .box {
-    background: palevioletred;
-    font-weight: bold;
-    text-align: center;
-    border: 6px solid maroon;
-    width: 80px;
-    height: 80px;
-  }
+  background: dodgerblue;
+  border: 4px solid midnightblue;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background: palevioletred;
+  font-weight: bold;
+  text-align: center;
+  border: 6px solid maroon;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
