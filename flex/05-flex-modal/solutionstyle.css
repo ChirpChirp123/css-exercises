@@ -20,9 +20,9 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
-  display: flex; /**/
-  padding: 2em; /**/
-  gap: 2em; /**/
+  display: flex;
+  gap: 16px;
+  padding: 8px;
 }
 
 .icon {
@@ -36,17 +36,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0; /**/
+  flex-shrink: 0;
 }
 
 .header{
-  display: flex; /**/
-  align-items: center; /**/
-  justify-content: space-between; /**/
-  font-size: 18px; /**/
-  font-weight: 700; /**/
-  margin-bottom: 8px; /**/
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  font-weight: 700;
+  font-size: 18px;
+
 }
+
+.text{
+  margin-bottom: 1em;
+}
+
 
 .close-button {
   background: #eee;
@@ -77,12 +82,3 @@ button.cancel {
   border: 1px solid #ddd;
   color: royalblue;
 }
-
-.text{
-  margin-bottom: 16px; /**/
-}
-
-/*notes*/
-
-/*First we need to establish .modal as a flexbox so we can adjust the components within*/
-/*Now we should add padding between the flexbox contents and the container itself, and add a gap between the contents themselves*/
