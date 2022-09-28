@@ -1,10 +1,6 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
-  display: flex; /**/
-  justify-content: space-between; /**/
-  align-items: center; /**/
-  padding: 8px; /**/
 }
 
 .logo {
@@ -18,10 +14,6 @@
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
-  display: flex; /**/
-  gap: 16px; /**/
-  margin: 0; /**/
-  padding: 0; /**/
 }
 
 a {
@@ -32,22 +24,22 @@ a {
   text-decoration: none;
 }
 
-/*Let's think about how many containers there possibly are: four.*/
-/*One flexbox container for the left numbers, one for the logo, and one for the right numbers.*/
-/*Then there would be one flexbox containing all the elements together within the container.*/
-/*Since it's possible to have flexboxes within each other.*/
+/*solution*/
 
-/*Header would be our main flexbox, so we start there*/
-/*First and foremost, we have to enable flexbox with "display: flex;*/
-/*Now that everything is in one row container, time to center it with "align-items: center;"*/
-/*We cannot use "justify-content: center;" otherwise everything would be pushed together at the center _horizontally_. */
-/*We still need that "justify-content" property though, so we'll use it to create _space around_ out containers: "justify-content: space-around;" */
-/*The logo container is still touching the borders of the header, so we'll use basic padding values to make it more centered*/
-/*Our logo should be centered completely now, so we can leave that be. Now we focus on the listed numbers*/
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 4px;
+  padding-left: 4px;
+}
 
-/*As previously stated, the numbers on each side are within their own container. What class are they attached to? "ul".
-/*The numbers are our __flex items__, not separate containers*/
-/*Now we need to enable flexbox for that as well. "Display: flex;" and then the numbers should be aligned on the same row*/
-/*We're getting close, we need to add _gaps_ between the content so they're separated*/
-/*You can create spaces in the flexbox by using "gap: #px; and then we're done."
-/*You can add margins and paddings optionally*/
+ul{
+  display: flex;
+  gap: 8px;
+  padding: 2px;
+}
+
+.logo{
+  margin: 10px;
+}

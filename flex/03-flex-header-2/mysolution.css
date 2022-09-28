@@ -12,21 +12,8 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
-  display: flex; /**/
-  align-items: center; /**/
 }
-.left, .right{
-    display: flex; /**/
-}
-.left{
-    margin: 8px; /**/
-}
-.right{
-    align-items: center; /**/
-    margin-left: auto; /**/
-    padding-right: 2em; /**/
-    gap: 16px; /**/
-}
+
 .profile-image {
   background: rebeccapurple;
   box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
@@ -48,7 +35,6 @@ button {
   background: rebeccapurple;
   color: white;
   padding: 8px 24px;
-  display: flex; /**/
 }
 
 a {
@@ -59,43 +45,30 @@ a {
 
 ul {
   list-style-type: none;
-  display: flex; /**/
-  gap: 2em; /**/
 }
 
-    /*This one is going to be more complicated since we're going to need to adjust our html to keep the sides of the header separate!*/
-/*Start again by counting the potential # of flexbox containers, including the one containing all: about four.*/
-/*Now before we get started, we need to separate the sections first before anything with new classes: "left" and "right". */
-/*We do this to be efficient and not overwhelm ourselves with technicalities on each selector group*/
-/*We don't want to touch the header because that is where our main flexbox is, but we can separate child classes underneath it into new flexboxes.*/
-/*Logos and Links will be placed under the "left" class division, the profile and button will be placed under the "right" class division.*/
-/*We've now established two new flexboxes of the header that allows us to adjust the two sides*/
+/*solution*/
 
-    /*Header is going to be our initial flexbox, time to enable "display: flex;".*/
-/*We're not going to position them directly on the center of the page, but we still need to center them within the container*/
-/*So naturally we're going to use "align-items: center;" and now we're finished with the header.
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-    /*Before we go on, we should establish flex rules for both sides' containers*/
-/*We'll create a new selector group ".left, .right{}" to establish flex for both of them. We'll do it under header to not be read last.*/
-/*Now that "display: flex;" is active, we can see everything is now within our main flexbox. Time to adjust them separately.*/
+.left, .right{
+  display: flex;
+  align-items: center;
+  margin: 3px;
+}
 
+.right{
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-
-    /*For ".left" the only thing we'll need to do is to establish margins between the container and the header.*/
-/*If it's already on the left-side, leave it as be. _Work Smarter, Not Harder_ */
-
-/*For ".right" we will have to establish margins between the left and right container to keep them separate*/
-/*"Margin-left: auto;" allows ".right" to use up the rest of the space within the Header flexbox to create a sufficient boundary*/
-/*Our button and notification are too close to each other, so we'll use "gap: #;" to give them some space plus padding from the border of the flexbox*/
-/*We still have one thing left, the notification box is too large, to fix that we can align it to the center to reduce all that needless space*/
-/*Why not do "align-items: center;" in .button? Because that would only change the dimensions of the _text's_ flexbox container.*/
-/*It has to be on the done on the right's flexbox container as the flexbox within is its flexbox item.*/
-/*And now we're done with the left/right side containers, but not with the containers within them...*/
-
-    /*The left side has .ul & .logo, and the right side has .button. Let's start with _left_ first.*/
-/*.logo is fine, so we can go directly to .ul and its container. First we have to enable "display: flex;".*/
-/*We can see already that it ensures that each link is on the same row, now they just need to be separated. So let's add "gap: #;".*/
-/*Left side looks about done, now to move onto the right side with .button and its container. Again, enable "display: flex;" for its flexbox*/
-
-
-/*We are officially done.*/
+ul{
+  display: flex;
+  gap: 1em;
+}
